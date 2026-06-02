@@ -1,0 +1,29 @@
+DATA QUALITY SUMMARY
+
+1. Most datasets are clean with no duplicate rows detected.
+
+2. Missing values observed in the yoy growth pct column of `04_monthly_sip_inflows.csv`.
+
+   * Total missing values: 12
+   * Likely due to unavailable YoY comparison data for earlier months.
+
+3. Multiple date-related columns such as date, month, launch date, transaction date, and portfolio date are currently loaded as object datatype instead of datetime datatype.
+
+4. No major missing values detected in other datasets.
+
+5. Numeric columns such as NAV, AUM, returns, SIP inflows, and market values were correctly loaded as numeric datatypes.
+
+6. No duplicate rows detected across all datasets.
+
+7. Dataset structures and column naming conventions are largely consistent.
+
+8. No unnamed columns or major whitespace issues detected during initial inspection.
+
+9. Categorical columns such as risk category, transaction type, and payment mode appear standardised and consistent.
+
+10. Further preprocessing may include:
+
+* Converting date columns to datetime format
+* Outlier detection for financial metrics
+* Validation of negative or extreme financial values
+* Standardisation checks for categorical features
