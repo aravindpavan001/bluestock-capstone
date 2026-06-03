@@ -7,7 +7,7 @@ DATA QUALITY SUMMARY
    * Total missing values: 12
    * Likely due to unavailable YoY comparison data for earlier months.
 
-3. Multiple date-related columns such as date, month, launch date, transaction date, and portfolio date are currently loaded as object datatype instead of datetime datatype.
+3. Multiple date-related columns, such as date, month, launch date, transaction date, and portfolio date, are currently loaded as object datatype instead of datetime datatype.
 
 4. No major missing values detected in other datasets.
 
@@ -23,7 +23,13 @@ DATA QUALITY SUMMARY
 
 10. Further preprocessing may include:
 
-* Converting date columns to datetime format
-* Outlier detection for financial metrics
-* Validation of negative or extreme financial values
-* Standardisation checks for categorical features
+11. AMFI code validation completed successfully.
+
+    - All 40 AMFI codes from `01_fund_master.csv` exist in 02_nav_history.csv.
+    - No missing AMFI mappings detected.
+    - Referential consistency between datasets verified.
+
+- Converting date columns to datetime format
+- Outlier detection for financial metrics
+- Validation of negative or extreme financial values
+- Standardisation checks for categorical features
