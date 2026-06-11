@@ -1,80 +1,63 @@
-import pandas as pd
-import matplotlib.pyplot as plt
+"""
+Calculates 95% Historical Value at Risk (VaR)
+for mutual fund return data.
 
-print("Loading datasets...")
+Input:
+    data/processed/returns_computed.csv
+
+Output:
+    data/processed/var_results.csv
+
+Author: Repalle Aravind Pavan Kumar
+"""
+import pandas as pd
+
+print("Loading returns data...")
 
 returns_df = pd.read_csv(
-    "data/processed/returns_computed.csv"
+"data/processed/returns_computed.csv"
 )
 
-fund_master = pd.read_csv(
-    "data/processed/cleaned_fund_master.csv"
+# Remove missing returns
+
+returns_df = returns_df.dropna(
+subset=["daily_return"]
 )
 
-returns_df['date'] = pd.to_datetime(
-    returns_df['date']
+# -------------------------
+
+# VaR Calculation
+
+# -------------------------
+
+var_results = []
+
+for fund in returns_df["amfi_code"].unique():
+
+
+ fund_returns = returns_df[
+    returns_df["amfi_code"] == fund
+]["daily_return"]
+
+var_95 = fund_returns.quantile(0.05)
+
+var_results.append(
+    [fund, var_95]
 )
 
-target_funds = [
-    "SBI Bluechip Fund - Regular Plan - Growth",
-    "HDFC Top 100 Fund - Regular Plan - Growth",
-    "ICICI Pru Bluechip Fund - Direct - Growth",
-    "Axis Bluechip Fund - Regular Plan - Growth",
-    "Nippon India Large Cap Fund - Growth Plan"
+var_df = pd.DataFrame(
+var_results,
+columns=[
+"amfi_code",
+"var_95"
 ]
-
-selected = fund_master[
-    fund_master['scheme_name'].isin(target_funds)
-]
-
-plt.figure(figsize=(12,6))
-
-for _, row in selected.iterrows():
-
-    amfi = row['amfi_code']
-    name = row['scheme_name']
-
-    temp = returns_df[
-        returns_df['amfi_code'] == amfi
-    ].copy()
-
-    temp = temp.sort_values('date')
-
-    temp['rolling_sharpe'] = (
-        temp['daily_return']
-        .rolling(90)
-        .mean()
-        /
-        temp['daily_return']
-        .rolling(90)
-        .std()
-    ) * (252 ** 0.5)
-
-    plt.plot(
-        temp['date'],
-        temp['rolling_sharpe'],
-        label=name[:20]
-    )
-
-plt.title(
-    "Rolling 90-Day Sharpe Ratio"
 )
 
-plt.xlabel("Date")
-plt.ylabel("Sharpe Ratio")
-
-plt.legend()
-
-plt.grid(True)
-
-plt.savefig(
-    "reports/charts/rolling_sharpe_chart.png",
-    dpi=300,
-    bbox_inches="tight"
+var_df.to_csv(
+"data/processed/var_results.csv",
+index=False
 )
 
-plt.show()
+print("VaR calculation completed!")
 
-print(
-    "rolling_sharpe_chart.png saved successfully!"
-)
+print(var_df.head())

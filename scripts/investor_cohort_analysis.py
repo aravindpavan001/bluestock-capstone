@@ -1,3 +1,12 @@
+"""
+Performs investor cohort analysis based on
+investment year and SIP behavior.
+
+Output:
+    reports/investor_cohort_analysis.csv
+
+Author: Repalle Aravind Pavan Kumar
+"""
 import pandas as pd
 import os
 

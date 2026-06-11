@@ -1,3 +1,9 @@
+"""
+ETL script for loading and transforming mutual fund data.
+
+Author: Repalle Aravind Pavan Kumar
+Project: Bluestock Mutual Fund Capstone
+"""
 from sqlalchemy import create_engine
 import pandas as pd
 

@@ -1,4 +1,4 @@
 amfi_code,fund_house,scheme_name,category,sub_category,plan,launch_date,benchmark,expense_ratio_pct,exit_load_pct,min_sip_amount,min_lumpsum_amount,fund_manager,risk_category,sebi_category_code,annual_return,annual_volatility,sharpe_ratio
-148567,Mirae Asset MF,Mirae Asset Large Cap Fund - Regular - Growth,Equity,Large Cap,Regular,2008-04-04,NIFTY 100 TRI,1.46,1.0,500,1000,Gaurav Misra,Moderate,EC01,0.2706,0.1419,1.4483
-120843,Kotak Mahindra MF,Kotak Flexicap Fund - Regular - Growth,Equity,Flexi Cap,Regular,2009-08-11,NIFTY 500 TRI,1.45,1.0,500,1000,Pankaj Tibrewal,Moderately High,EC04,0.2726,0.1589,1.3067
-148569,Mirae Asset MF,Mirae Asset Tax Saver Fund - Regular - Growth,Equity,ELSS,Regular,2015-12-28,NIFTY 500 TRI,1.6,1.0,500,1000,Neelesh Surana,High,EC05,0.2833,0.1767,1.2349
+120507,ICICI Prudential MF,ICICI Pru Liquid Fund - Regular - Growth,Debt,Liquid,Regular,2001-11-17,CRISIL Liquid Fund AI Index,0.74,0.0,500,5000,Rahul Goswami,Low,DC01,0.0674,0.0049,0.4957
+120844,Kotak Mahindra MF,Kotak Liquid Fund - Regular - Growth,Debt,Liquid,Regular,2004-03-03,CRISIL Liquid Fund AI Index,0.6,0.0,500,5000,Deepak Agrawal,Low,DC01,0.0645,0.0051,-0.0887
+101208,Aditya Birla Sun Life MF,ABSL Liquid Fund - Regular - Growth,Debt,Liquid,Regular,2000-04-17,CRISIL Liquid Fund AI Index,0.79,0.0,500,5000,Maneesh Dangi,Low,DC01,0.0609,0.0051,-0.8156

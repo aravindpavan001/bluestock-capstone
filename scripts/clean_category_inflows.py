@@ -1,3 +1,9 @@
+"""
+Cleans and preprocesses raw mutual fund dataset.
+
+Author: Repalle Aravind Pavan Kumar
+Project: Bluestock Mutual Fund Capstone
+"""
 import pandas as pd
 
 print("Cleaning Category Inflows...")

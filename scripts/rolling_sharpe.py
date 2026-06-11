@@ -1,3 +1,16 @@
+"""
+Calculates and visualizes Rolling 90-Day
+Sharpe Ratio for selected mutual funds.
+
+Input:
+    data/processed/returns_computed.csv
+    data/processed/cleaned_fund_master.csv
+
+Output:
+    reports/rolling_sharpe_chart.png
+
+Author: Repalle Aravind Pavan Kumar
+"""
 import pandas as pd
 import matplotlib.pyplot as plt
 import os

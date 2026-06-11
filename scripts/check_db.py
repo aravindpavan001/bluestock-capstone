@@ -1,3 +1,9 @@
+"""
+Utility script for validation, exploration, and data collection.
+
+Author: Repalle Aravind Pavan Kumar
+Project: Bluestock Mutual Fund Capstone
+"""
 import sqlite3
 
 conn = sqlite3.connect("bluestock_mf.db")

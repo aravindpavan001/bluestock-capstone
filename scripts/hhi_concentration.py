@@ -1,3 +1,12 @@
+"""
+Calculates Herfindahl-Hirschman Index (HHI)
+to measure portfolio concentration.
+
+Output:
+    reports/hhi_concentration_report.csv
+
+Author: Repalle Aravind Pavan Kumar
+"""
 import pandas as pd
 import os
 

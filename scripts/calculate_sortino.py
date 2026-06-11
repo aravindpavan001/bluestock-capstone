@@ -1,3 +1,9 @@
+"""
+Performs financial risk and performance analysis.
+
+Author: Repalle Aravind Pavan Kumar
+Project: Bluestock Mutual Fund Capstone
+"""
 import pandas as pd
 import numpy as np
 

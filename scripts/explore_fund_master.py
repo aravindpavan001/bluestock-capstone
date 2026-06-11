@@ -1,3 +1,9 @@
+"""
+Utility script for validation, exploration, and data collection.
+
+Author: Repalle Aravind Pavan Kumar
+Project: Bluestock Mutual Fund Capstone
+"""
 import pandas as pd
 
 df = pd.read_csv("data/raw/01_fund_master.csv")
